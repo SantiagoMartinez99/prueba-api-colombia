@@ -5,13 +5,14 @@
   grid-row-gap: 10px;
 }
 
-.president-image {
+.president-image,
+.attraction-image {
   height: 100px;
   width: 100px;
 }
 
 /* ================================COMPONENTS============================================ */
 .parent {
-display: grid;
-grid-template-columns: 3rem 8rem repeat(5, 5rem) 1fr repeat(2, 5rem);
+  display: grid;
+  grid-template-columns: 3rem 8rem repeat(5, 5rem) 1fr repeat(2, 5rem);
 }

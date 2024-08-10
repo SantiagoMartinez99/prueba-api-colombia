@@ -11,7 +11,7 @@ function PresidentsTab() {
   }, []);
 
   useEffect(() => {
-    console.log(presidentsData)
+    console.log(presidentsData);
     if (presidentsData.length) {
       const parties = getUniqueParties(presidentsData);
       setGroupedParties(parties);
@@ -33,6 +33,7 @@ function PresidentsTab() {
       }))
       .sort((a, b) => b.count - a.count);
   };
+
   const handlePartyFilter = (e) => {
     console.log(e.target.value);
     const filtered = presidentsData.filter(
