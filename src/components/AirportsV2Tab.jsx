@@ -43,12 +43,12 @@ function AirportsV2Tab() {
       const regionsData = await responseRegions.json();
       const airportsData = await responseAirports.json();
       const departmentsData = await responseDepartments.json();
-      const departmentsMap = new Map(
-        departmentsData.map((department) => [department.id, department])
-      );
       console.log(regionsData);
       console.log(airportsData);
       console.log(departmentsData);
+      const departmentsMap = new Map(
+        departmentsData.map((department) => [department.id, department])
+      );
 
       const combinedData = airportsData.map((airport) => {
         const department = departmentsMap.get(airport.city.departmentId);

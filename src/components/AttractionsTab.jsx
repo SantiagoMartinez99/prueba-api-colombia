@@ -50,7 +50,7 @@ function AttractionsTab() {
         const department = departmentsMap.get(attraction.city.departmentId);
         return {
           ...attraction,
-          departmentName: department?.name || "Unknown Department",
+          departmentName: department?.name || "Desconocido",
         };
       });
 
