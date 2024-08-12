@@ -88,7 +88,7 @@ function AttractionsTab() {
       >
         Eliminar Filtros
       </p>
-      <p>{filteredAttractions.length} atracciones encontrados</p>
+      <p>{filteredAttractions.length} atracciones encontradas</p>
       <p>Realizado en {fetchTime} segundos</p>
       <AttractionsTable filteredAttractions={filteredAttractions} />
     </div>
