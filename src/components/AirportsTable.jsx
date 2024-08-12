@@ -9,7 +9,6 @@ function AirportsTable({ filteredAirports }) {
             <tr>
               <th>ID</th>
               <th>Nombre</th>
-              <th>descripción</th>
               <th>Ciudad</th>
               <th>Tipo</th>
             </tr>
@@ -19,7 +18,6 @@ function AirportsTable({ filteredAirports }) {
               <tr key={airport.id}>
                 <td>{airport.id}</td>
                 <td>{airport.name}</td>
-                <td>{airport.description}</td>
                 <td>{airport.city.name}</td>
                 <td>{airport.type}</td>
               </tr>

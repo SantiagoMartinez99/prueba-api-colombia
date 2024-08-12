@@ -77,7 +77,7 @@ function AttractionsTab() {
           Seleccione una opción
         </option>
         {groupedDepartments.map((department) => (
-          <option key={department.id} value={department.name}>
+          <option key={department.name} value={department.name}>
             {department.name} ({department.count} atracciones)
           </option>
         ))}
