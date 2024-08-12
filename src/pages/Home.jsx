@@ -2,6 +2,7 @@ import PresidentsTab from "../components/PresidentsTab";
 import AttractionsTab from "../components/AttractionsTab";
 import { useState } from "react";
 import AirportsTab from "../components/AirportsTab";
+import AirportsV2Tab from "../components/AirportsV2Tab";
 
 function Home() {
   const [activeTab, setActiveTab] = useState("tab1");
@@ -35,13 +36,14 @@ function Home() {
           className={`tab-button ${activeTab === "tab4" ? "active" : ""}`}
           onClick={() => handleTabClick("tab4")}
         >
-          Aeropuertos
+          AeropuertosV2
         </button>
       </div>
       <div className="tab-content">
         {activeTab === "tab1" && <PresidentsTab />}
         {activeTab === "tab2" && <AttractionsTab />}
         {activeTab === "tab3" && <AirportsTab />}
+        {activeTab === "tab4" && <AirportsV2Tab />}
       </div>
     </>
   );

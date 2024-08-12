@@ -1,5 +1,31 @@
-function AirportsV2Table() {
-  return <div>AirportsV2Table</div>;
+/* eslint-disable react/prop-types */
+function AirportsV2Table({ filteredAirports }) {
+  return (
+    <>
+      <div className="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nombre</th>
+              <th>Ciudad</th>
+              <th>Tipo</th>
+            </tr>
+          </thead>
+          <tbody>
+            {filteredAirports.map((airport) => (
+              <tr key={airport.id}>
+                <td>{airport.id}</td>
+                <td>{airport.name}</td>
+                <td>{airport.city.name}</td>
+                <td>{airport.type}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
+  );
 }
 
 export default AirportsV2Table;

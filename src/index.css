@@ -10,14 +10,14 @@ h1 {
 
 .tabs {
   display: flex;
-  width: 32rem;
+  width: 40rem;
   height: 3rem;
   align-items: center;
   margin: 0 2rem;
 }
 
 .tabs button {
-  width: 8rem;
+  width: 10rem;
   height: 100%;
   border: none;
   background: #ffffff;
