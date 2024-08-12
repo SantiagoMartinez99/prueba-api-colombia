@@ -1,8 +1,58 @@
-.president-card {
-  display: grid;
-  grid-template-columns: 3rem 8rem repeat(5, 5rem) 1fr repeat(2, 5rem);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+* {
+  font-family: Ubuntu, sans-serif;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  text-align: center;
+}
+
+.tabs {
+  display: flex;
+  width: 32rem;
+  height: 3rem;
+  align-items: center;
+  margin: 0 2rem;
+}
+
+.tabs button {
+  width: 8rem;
+  height: 100%;
+  border: none;
+  background: #ffffff;
+  font-size: 1rem;
+  justify-content: center;
+}
+
+.table-container {
+  width: 95%;
+  height: 50rem;
+  background: #ffffff;
+  border-radius: 2rem;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #f2f2f2;
+  height: 4rem;
+}
+
+th,
+td {
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(2n) {
+  background-color: #eee;
 }
 
 .president-image,
@@ -11,8 +61,56 @@
   width: 100px;
 }
 
-/* ================================COMPONENTS============================================ */
+.button-clear-filters,
+.tabs button {
+  width: 10rem;
+  height: 3rem;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  font-weight: 700;
+  border-bottom: black 2px solid;
+}
+
+.button-clear-filters::after,
+.tabs button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button-clear-filters:hover::after,
+.tabs button:hover::after {
+  background-color: #00fafa;
+}
+
+.button-clear-filters:hover,
+.tabs button:hover {
+  cursor: pointer;
+}
+
+.container-tab {
+  padding: 2rem;
+}
+
 .parent {
   display: grid;
   grid-template-columns: 3rem 8rem repeat(5, 5rem) 1fr repeat(2, 5rem);
+}
+
+.select-filters {
+  font-weight: 700;
+  font-size: 1rem;
+  height: 2rem;
+  border-radius: 50px;
+  background: #ffffff;
+  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
 }

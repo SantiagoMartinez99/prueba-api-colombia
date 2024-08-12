@@ -2,33 +2,43 @@
 function PresidentsTable({ filteredPresidents }) {
   return (
     <>
-      <div className="parent">
-        <div className="div1">ID</div>
-        <div className="div2">Imagen</div>
-        <div className="div3">Nombre</div>
-        <div className="div4">Apellidos</div>
-        <div className="div5">Fecha de inicio</div>
-        <div className="div6">Fecha de fin</div>
-        <div className="div7">Partido</div>
-        <div className="div8">Descripción</div>
-        <div className="div9">Código Ciudad</div>
-        <div className="div10">Ciudad</div>
-      </div>
-      <div>
-        {filteredPresidents.map((data) => (
-          <div key={data.id} className="president-card">
-            <p>{data.id}</p>
-            <img src={`${data.image}`} className="president-image"></img>
-            <p>{data.name}</p>
-            <p>{data.lastName}</p>
-            <p>{data.startPeriodDate}</p>
-            <p>{data.endPeriodDate}</p>
-            <p>{data.politicalParty}</p>
-            <p>{data.description}</p>
-            <p>{data.cityId}</p>
-            <p>{data.city}</p>
-          </div>
-        ))}
+      <div className="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Imagen</th>
+              <th>Nombre</th>
+              <th>Apellidos</th>
+              <th>Fecha de inicio del período</th>
+              <th>Fecha de finalización del período</th>
+              <th>Partido</th>
+              <th>Descripción</th>
+              <th>Ciudad</th>
+            </tr>
+          </thead>
+          <tbody>
+            {filteredPresidents.map((data) => (
+              <tr key={data.id}>
+                <td>{data.id}</td>
+                <td>
+                  <img
+                    src={`${data.image}`}
+                    alt={data.name}
+                    className="president-image"
+                  />
+                </td>
+                <td>{data.name}</td>
+                <td>{data.lastName}</td>
+                <td>{data.startPeriodDate}</td>
+                <td>{data.endPeriodDate}</td>
+                <td>{data.politicalParty}</td>
+                <td>{data.description}</td>
+                <td>{data.cityName}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </>
   );

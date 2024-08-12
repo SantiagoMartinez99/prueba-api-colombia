@@ -1,14 +1,40 @@
-function AttractionsTable() {
+/* eslint-disable react/prop-types */
+function AttractionsTable({ filteredAttractions }) {
   return (
-    <div>
-      {/* {data.map((attraction) => (
-        <div key={attraction.id} className="attraction-card">
-          <p>{attraction.name}</p>
-          <p>{attraction.description}</p>
-        </div>
-      ))} */}
-      <h1>desde attractions</h1>
-    </div>
+    <>
+      <div className="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Imagen</th>
+              <th>Nombre</th>
+              <th>Descripción</th>
+              <th>Departamento</th>
+              <th>Ciudad</th>
+            </tr>
+          </thead>
+          <tbody>
+            {filteredAttractions.map((attraction) => (
+              <tr key={attraction.id}>
+                <td>{attraction.id}</td>
+                <td>
+                  <img
+                    src={`${attraction.images}`}
+                    alt={attraction.name}
+                    className="attraction-image"
+                  />
+                </td>
+                <td>{attraction.name}</td>
+                <td>{attraction.description}</td>
+                <td>{attraction.departmentName}</td>
+                <td>{attraction.city.name}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
   );
 }
 
