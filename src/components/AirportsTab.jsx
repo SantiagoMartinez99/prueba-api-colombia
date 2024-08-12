@@ -63,7 +63,7 @@ function AirportsTab() {
         </option>
         {groupedDepartments.map((department) => (
           <option key={department.id} value={department.id}>
-            {department.name} ({department.count} atracciones)
+            {department.name} ({department.count} aeropuertos)
           </option>
         ))}
       </select>
@@ -73,7 +73,7 @@ function AirportsTab() {
       >
         Eliminar Filtros
       </p>
-      <p>{filteredAirports.length} atracciones encontrados</p>
+      <p>{filteredAirports.length} aeropuertos encontrados</p>
       <p>Realizado en {fetchTime} segundos</p>
 
       <AirportsTable filteredAirports={filteredAirports} />
